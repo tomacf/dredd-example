@@ -1,13 +1,18 @@
 sudo: false
 language: node_js
 node_js:
-  - "stable"
+  - stable
 services:
-  - "mongodb"
+  - mongodb
 cache:
   directories:
-    - "node_modules"
+    - node_modules
 install:
-  - "npm install --no-optional"
+  - npm install --no-optional
 before_script:
-  - "npm info dredd version"
+  - npm info dredd version
+  - dredd
+before_install:
+  - npm install -g dredd@5.1.7
+  - npm install -g dredd@5.1.7
+  - npm install -g dredd@5.1.7
